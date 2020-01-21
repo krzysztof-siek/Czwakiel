@@ -2,8 +2,9 @@
 $bg-green: #0a4426;
 $bg-dark: #2d2e2e;
 $darker: #a8a8a8;
-$text-dark: #fefefe;
+$text-light: #fefefe;
 $green: #0a4426;
+$white: #fff;
 
 // Sizes
 $f-small: 17px;
@@ -11,7 +12,3 @@ $f-mid: 18px;
 $f-mid-lg: 26px;
 $f-big: 31px;
 $f-huge: 36px;
-
-body {
-    background-color: $green;
-}
