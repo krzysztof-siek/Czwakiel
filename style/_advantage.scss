@@ -3,7 +3,7 @@
     display: grid;
     grid-template-columns: 1fr;
     position: relative;
-    margin-bottom: 140px;
+
 
 
     @media(min-width: 992px) {
@@ -33,6 +33,7 @@
             margin: 20px 50px;
             display: flex;
             justify-content: space-between;
+            margin-bottom: 100px;
 
         }
 

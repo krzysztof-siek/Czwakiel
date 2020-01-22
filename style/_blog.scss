@@ -1,0 +1,56 @@
+.blog {
+    display: grid;
+    grid-template-columns: 1fr;
+    position: relative;
+
+
+
+    @media(min-width: 992px) {
+        grid-template-columns: 1fr 6fr 100px;
+    }
+
+    .news-container {
+        margin: 20px;
+        width: 90%;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        margin: 50px;
+
+        @media(min-width: 992px) {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .single-news {
+            margin-bottom: 50px;
+
+
+            .image {
+                width: 100%;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            .blog-date {
+                font-family: "Roboto", sans-serif;
+                font-size: $f-little;
+                font-weight: 900;
+                line-height: 2.5;
+                letter-spacing: 1.54;
+                color: $bg-green;
+            }
+
+            .blog-title {
+                font-family: "Lora";
+                font-size: $f-26;
+                line-height: 1.42;
+                letter-spacing: -0.86px;
+                color: $bg-dark
+            }
+
+        }
+    }
+}
