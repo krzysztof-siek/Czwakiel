@@ -1,6 +1,5 @@
 .nav-wrapper {
     background-color: $green;
-
 }
 
 .nav {
@@ -8,19 +7,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
     margin: 0 auto;
-    padding: 20px 0;
-
-
+    padding: 20px;
 
     .nav-brand {
         margin-left: 20px;
         z-index: 1000;
-
-        @media(min-width: 992px) {
-            margin-left: 100px;
-        }
     }
 
 
@@ -42,7 +34,7 @@
         }
 
         @media(min-width:992px) {
-            margin-right: 100px;
+            // margin-right: 100px;
             position: static;
             transform: translateY(0);
             flex-direction: row;

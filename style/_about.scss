@@ -1,0 +1,131 @@
+.about {
+    background-color: $white;
+    display: grid;
+    grid-template-columns: 1fr;
+    position: relative;
+
+
+    @media(min-width: 992px) {
+        grid-template-columns: 1fr 6fr 100px;
+    }
+
+    .section-scroll {
+        background-color: $bg-dark;
+    }
+
+
+    .main-content {
+        transform: translateY(-140px);
+        background-color: $white;
+
+
+        .intro {
+            font-size: $f-big;
+            line-height: 1.26;
+            color: $bg-dark;
+            margin-top: 48.5px;
+            margin-left: 50px;
+
+            .strong {
+                font-weight: bold;
+                color: $green;
+            }
+        }
+
+        .slogan {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            padding: 0 50px;
+            margin-bottom: 128px;
+
+
+            @media(min-width: 992px) {
+                flex-direction: row;
+            }
+
+
+            .slogan-content {
+                width: 100%;
+                line-height: 1.5;
+                font-size: $f-mid;
+                margin-bottom: 10px;
+
+
+                &:nth-child(1) {
+                    font-family: 'Roboto', sans-serif;
+                    font-size: $f-little;
+                    color: $color1;
+                    line-height: 1.29;
+                }
+            }
+        }
+
+        .about-heading {
+            margin-left: 50px;
+
+        }
+
+        .about-intro {
+            margin: 24px 0 50px 50px;
+            width: 70%;
+            font-family: "Roboto", sans-serif;
+
+            @media (min-width: 992px) {
+                width: 47%;
+
+            }
+
+            .intro-text {
+                letter-spacing: 0.13px;
+                color: $color1;
+                font-size: $f-little;
+                line-height: 20px;
+            }
+        }
+
+        .services {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 100%;
+
+            @media (min-width: 992px) {
+                flex-direction: row;
+                // margin-left: 20px;
+                width: 100%;
+
+            }
+
+            .service-block {
+                background-color: $white;
+                padding: 36px;
+                border: 1px solid $green;
+                width: 70%;
+                margin: 0 auto;
+                margin-bottom: 20px;
+
+                @media (min-width: 992px) {
+                    width: 40%;
+                }
+
+                .title {
+                    color: $green;
+                    font-size: $f-big;
+                    font-weight: bold;
+                    line-height: 1.26;
+                    margin-bottom: 16px;
+                }
+
+                .info {
+                    color: $bg-dark;
+                    opacity: 0.66;
+                    font-size: $f-mid;
+                    line-height: 1.9;
+                }
+            }
+        }
+
+    }
+}

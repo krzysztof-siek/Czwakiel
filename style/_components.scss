@@ -1,0 +1,39 @@
+.section-scroll {
+    background-color: $green;
+    position: relative;
+    display: none;
+
+    @media(min-width: 992px) {
+        display: block;
+    }
+
+    .scroll {
+        position: absolute;
+        bottom: 200px;
+        left: 50%;
+
+
+        .scroll-txt {
+            transform: translate(-40%, -150%) rotate(90deg);
+            font-size: $f-small;
+            color: $white;
+            opacity: 0.34;
+        }
+    }
+}
+
+.row {
+    width: 100%;
+
+    .heading {
+        font-size: $f-huge;
+        line-height: 49px;
+        letter-spacing: -1.01px;
+        color: $bg-dark;
+
+        .strong {
+            color: $bg-green;
+            font-weight: bold;
+        }
+    }
+}
