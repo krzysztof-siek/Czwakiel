@@ -15,24 +15,63 @@
 
     .news-container {
         margin: 20px;
-        // width: 90%;
         overflow: hidden;
         display: flex;
         flex-direction: column;
-        margin: 50px;
 
         @media(min-width: 992px) {
+            margin: 50px;
             width: 90%;
             flex-direction: row;
             justify-content: space-between;
+            margin-bottom: 100px;
         }
 
         .single-news {
             margin-bottom: 50px;
 
 
+            &:hover {
+                .image::after {
+                    height: 100%;
+                    width: 100%;
+                }
+
+                .image::before {
+                    opacity: 1;
+                }
+            }
+
             .image {
                 width: 100%;
+                position: relative;
+
+                &::before {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    content: url("https://img.icons8.com/cotton/64/000000/plus--v3.png");
+                    transform: translate(-50%, -50%);
+                    z-index: 1100;
+                    opacity: 0;
+                    transition: .5s;
+                    cursor: pointer;
+                }
+
+                &::after {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    height: 0%;
+                    width: 0%;
+                    content: "";
+                    background-color: $green;
+                    opacity: 0.7;
+                    transition: .5s;
+                    transform: translate(-50%, -50%);
+
+
+                }
 
                 img {
                     width: 100%;

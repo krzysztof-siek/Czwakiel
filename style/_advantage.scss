@@ -15,7 +15,7 @@
     }
 
     .adv-heading {
-        margin-left: 20px;
+
 
         @media(min-width: 992px) {
             margin-left: 50px;
@@ -23,8 +23,10 @@
     }
 
     .icons-container {
-        margin: 20px;
-        width: 100%;
+        margin-left: 20px;
+        width: 90%;
+        margin-bottom: 50px;
+
 
 
 
@@ -33,7 +35,7 @@
             margin: 20px 50px;
             display: flex;
             justify-content: space-between;
-            margin-bottom: 100px;
+            margin-bottom: 200px;
 
         }
 
