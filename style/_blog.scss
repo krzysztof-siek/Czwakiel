@@ -9,15 +9,20 @@
         grid-template-columns: 1fr 6fr 100px;
     }
 
+    .section-scroll {
+        background-color: $bg-dark;
+    }
+
     .news-container {
         margin: 20px;
-        width: 90%;
+        // width: 90%;
         overflow: hidden;
         display: flex;
         flex-direction: column;
         margin: 50px;
 
         @media(min-width: 992px) {
+            width: 90%;
             flex-direction: row;
             justify-content: space-between;
         }

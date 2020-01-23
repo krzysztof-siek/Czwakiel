@@ -1,0 +1,108 @@
+.seo {
+    display: grid;
+    grid-template-columns: 1fr;
+    position: relative;
+    overflow: hidden;
+
+
+    @media(min-width: 992px) {
+        grid-template-columns: 1fr 6fr 100px;
+    }
+
+    .section-scroll {
+        background-color: $bg-dark;
+    }
+
+    .section-seo {
+        background: linear-gradient(90deg, rgba(45, 46, 46, 0.3253676470588235) 0%, rgba(45, 46, 46, 1) 100%), url('../img/seo-bg.png');
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+
+
+        @media(min-width: 992px) {
+            margin-left: 50px;
+            flex-direction: row;
+            margin-bottom: 100px;
+
+        }
+
+        .img {
+            z-index: 1100;
+            margin: 50px auto 0;
+
+
+
+            @media(min-width: 992px) {
+                transform: translate(-20%);
+
+            }
+        }
+
+        .seo-heading {
+            display: flex;
+            flex-direction: column;
+            margin-top: 100px;
+            margin-left: 20px;
+            width: 90%;
+
+            @media(min-width:992px) {
+                width: 60%;
+                margin-left: 100px;
+                margin-top: 170px;
+                margin-left: 50px;
+
+            }
+
+
+            .title {
+                font-size: $f-huge;
+                line-height: 49px;
+                letter-spacing: -1.01px;
+                color: $white;
+
+                .bold {
+                    font-weight: bold;
+
+                }
+            }
+
+            .description {
+                display: flex;
+                margin-top: 24px;
+                color: $white;
+                font-family: "Roboto", sans-serif;
+                flex-direction: column;
+
+
+                @media(min-width: 992px) {
+                    flex-direction: row;
+                }
+
+                .left,
+                .right {
+                    width: 90%;
+                    opacity: 0.86;
+                    font-size: $f-little;
+                    line-height: 1.43;
+                    margin-right: 50px;
+                    margin-bottom: 100px;
+                    font-weight: 300;
+
+
+                    @media(min-width: 992px) {
+                        width: 60%;
+                        margin-bottom: 100px;
+                    }
+
+                    button {
+                        margin: 30px 0;
+                    }
+                }
+
+
+            }
+        }
+    }
+}
