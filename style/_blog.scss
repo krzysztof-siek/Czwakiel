@@ -30,6 +30,20 @@
         .single-news {
             margin-bottom: 50px;
 
+            @media(min-width: 992px) {
+                margin: 20px;
+
+
+                &:first-child {
+                    margin-left: 0;
+                }
+
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+
+
 
             &:hover {
                 .image::after {

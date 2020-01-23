@@ -8,7 +8,7 @@
     justify-content: space-between;
     align-items: center;
     margin: 0 auto;
-    padding: 20px;
+    padding: 20px 0;
 
     .nav-brand {
         margin-left: 20px;
@@ -18,7 +18,7 @@
 
     .nav-links {
         background-color: $green;
-        position: absolute;
+        position: fixed;
         padding: 30px 0;
         top: 120px;
         left: 0;
@@ -28,6 +28,11 @@
         align-items: center;
         transform: translateY(-150%);
         transition: .5s;
+        z-index: 1000;
+
+        &.top {
+            top: 0;
+        }
 
         &.open {
             transform: translateY(0);
@@ -95,9 +100,25 @@
         margin-right: 20px;
         z-index: 1000;
 
+
+
+        &.fixed {
+            position: fixed;
+            top: 20px;
+            right: 5px;
+
+            .nav-button-line {
+                background-color: black;
+            }
+        }
+
         @media(min-width: 992px) {
             display: none;
         }
+
+
+
+
 
 
         .nav-button-line {

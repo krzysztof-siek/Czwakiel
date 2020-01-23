@@ -235,8 +235,14 @@ header .section-scroll {
 }
 
 header .section-scroll .scroll {
+  cursor: pointer;
   position: absolute;
   bottom: 30%;
+}
+
+header .section-scroll .scroll img {
+  -webkit-animation: scrollAnim 2s infinite;
+          animation: scrollAnim 2s infinite;
 }
 
 header .header-wrapper {
@@ -286,7 +292,7 @@ header .welcome {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top center;
-  height: 100vh;
+  height: 90vh;
   width: 100%;
 }
 
@@ -306,7 +312,7 @@ header .welcome .header-grid {
 }
 
 header .welcome .header-grid .title-container {
-  margin-top: 200px;
+  margin-top: 180px;
   margin-left: 20px;
   width: 80%;
   display: -webkit-box;
@@ -320,7 +326,7 @@ header .welcome .header-grid .title-container {
 
 @media (min-width: 992px) {
   header .welcome .header-grid .title-container {
-    margin-top: 300px;
+    margin-top: 200px;
     width: 38%;
     margin-left: 50px;
   }
@@ -354,6 +360,36 @@ header .welcome .header-grid .title-container .heading-subtitle {
   }
 }
 
+@-webkit-keyframes scrollAnim {
+  0% {
+    -webkit-transform: translateY(0px) scale(1);
+            transform: translateY(0px) scale(1);
+  }
+  50% {
+    -webkit-transform: translateY(20px) scale(1.2);
+            transform: translateY(20px) scale(1.2);
+  }
+  100% {
+    -webkit-transform: translateY(0px) scale(1);
+            transform: translateY(0px) scale(1);
+  }
+}
+
+@keyframes scrollAnim {
+  0% {
+    -webkit-transform: translateY(0px) scale(1);
+            transform: translateY(0px) scale(1);
+  }
+  50% {
+    -webkit-transform: translateY(20px) scale(1.2);
+            transform: translateY(20px) scale(1.2);
+  }
+  100% {
+    -webkit-transform: translateY(0px) scale(1);
+            transform: translateY(0px) scale(1);
+  }
+}
+
 .nav-wrapper {
   background-color: #0a4426;
 }
@@ -370,7 +406,7 @@ header .welcome .header-grid .title-container .heading-subtitle {
       -ms-flex-align: center;
           align-items: center;
   margin: 0 auto;
-  padding: 20px;
+  padding: 20px 0;
 }
 
 .nav .nav-brand {
@@ -380,7 +416,7 @@ header .welcome .header-grid .title-container .heading-subtitle {
 
 .nav .nav-links {
   background-color: #0a4426;
-  position: absolute;
+  position: fixed;
   padding: 30px 0;
   top: 120px;
   left: 0;
@@ -399,6 +435,11 @@ header .welcome .header-grid .title-container .heading-subtitle {
           transform: translateY(-150%);
   -webkit-transition: .5s;
   transition: .5s;
+  z-index: 1000;
+}
+
+.nav .nav-links.top {
+  top: 0;
 }
 
 .nav .nav-links.open {
@@ -476,6 +517,16 @@ header .welcome .header-grid .title-container .heading-subtitle {
           flex-direction: column;
   margin-right: 20px;
   z-index: 1000;
+}
+
+.nav .nav-button.fixed {
+  position: fixed;
+  top: 20px;
+  right: 5px;
+}
+
+.nav .nav-button.fixed .nav-button-line {
+  background-color: black;
 }
 
 @media (min-width: 992px) {
@@ -625,6 +676,7 @@ header .welcome .header-grid .title-container .heading-subtitle {
         -ms-flex-direction: row;
             flex-direction: row;
     width: 95%;
+    margin-bottom: 0;
   }
 }
 
@@ -816,6 +868,18 @@ header .welcome .header-grid .title-container .heading-subtitle {
   margin-bottom: 50px;
 }
 
+@media (min-width: 992px) {
+  .blog .news-container .single-news {
+    margin: 20px;
+  }
+  .blog .news-container .single-news:first-child {
+    margin-left: 0;
+  }
+  .blog .news-container .single-news:last-child {
+    margin-right: 0;
+  }
+}
+
 .blog .news-container .single-news:hover .image::after {
   height: 100%;
   width: 100%;
@@ -931,8 +995,8 @@ header .welcome .header-grid .title-container .heading-subtitle {
 
 @media (min-width: 992px) {
   .seo .section-seo .img {
-    -webkit-transform: translate(-70%, 10%);
-            transform: translate(-70%, 10%);
+    -webkit-transform: translate(-200px, 10%);
+            transform: translate(-200px, 10%);
   }
 }
 
@@ -1196,8 +1260,7 @@ header .welcome .header-grid .title-container .heading-subtitle {
       -ms-flex-align: start;
           align-items: flex-start;
   color: #fff;
-  padding: 50px 0px 50px 20px;
-  margin-bottom: 100px;
+  padding: 50px 0px 100px 20px;
 }
 
 @media (min-width: 992px) {
@@ -1209,19 +1272,19 @@ header .welcome .header-grid .title-container .heading-subtitle {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-    padding: 100px;
+    padding: 120px 80px;
     margin: 100px 0 100px 50px;
   }
 }
 
 .contact .contact-container .contact-welcome {
-  width: 100%;
+  width: 90%;
   margin-bottom: 20px;
 }
 
 @media (min-width: 992px) {
   .contact .contact-container .contact-welcome {
-    width: 40%;
+    width: 50%;
   }
 }
 
@@ -1231,7 +1294,8 @@ header .welcome .header-grid .title-container .heading-subtitle {
 
 @media (min-width: 992px) {
   .contact .contact-container .contact-phones {
-    width: 40%;
+    width: 50%;
+    padding: 0 20px;
   }
 }
 
@@ -1251,7 +1315,20 @@ header .welcome .header-grid .title-container .heading-subtitle {
 }
 
 .contact .contact-container .email {
+  margin-top: 20px;
   margin-bottom: 50px;
+  font-size: 21px;
+  letter-spacing: -0.73px;
+  font-weight: bold;
+  list-style: 1.69;
+  color: #fff;
+}
+
+@media (min-width: 992px) {
+  .contact .contact-container .email {
+    margin-top: 50px;
+    margin-bottom: 0;
+  }
 }
 
 .contact .contact-container .contact-info {
@@ -1286,10 +1363,11 @@ header .welcome .header-grid .title-container .heading-subtitle {
   font-family: "Roboto", sans-serif;
   font-size: 18px;
   line-height: 1.44;
+  margin-right: 100px;
 }
 
-.contact .contact-container .contact-info .icon .little {
-  font-size: 14px;
+.contact .contact-container .contact-info .small {
+  width: 80%;
 }
 
 footer .footer-info {
@@ -1393,6 +1471,13 @@ footer .footer-info .socials .social-icon-container .social-img {
   height: 20px;
   width: 20px;
   cursor: pointer;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+footer .footer-info .socials .social-icon-container .social-img:hover::after {
+  opacity: .7;
+  background-color: #0a4426;
 }
 
 footer .footer-info .socials .social-icon-container .social-img::after {

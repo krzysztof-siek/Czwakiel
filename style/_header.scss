@@ -6,8 +6,15 @@ header {
         position: relative;
 
         .scroll {
+            cursor: pointer;
             position: absolute;
             bottom: 30%;
+
+            img {
+                animation: scrollAnim 2s infinite;
+            }
+
+
         }
     }
 
@@ -52,7 +59,7 @@ header {
         background-size: cover;
         background-repeat: no-repeat;
         background-position: top center;
-        height: 100vh;
+        height: 90vh;
         width: 100%;
 
         .header-grid {
@@ -67,14 +74,14 @@ header {
 
 
             .title-container {
-                margin-top: 200px;
+                margin-top: 180px;
                 margin-left: 20px;
                 width: 80%;
                 display: flex;
                 flex-direction: column;
 
                 @media(min-width: 992px) {
-                    margin-top: 300px;
+                    margin-top: 200px;
                     width: 38%;
                     margin-left: 50px;
                 }
@@ -106,5 +113,20 @@ header {
                 }
             }
         }
+    }
+}
+
+@keyframes scrollAnim {
+    0% {
+        transform: translateY(0px) scale(1);
+    }
+
+    50% {
+        transform: translateY(20px) scale(1.2);
+    }
+
+    100% {
+        transform: translateY(0px) scale(1);
+
     }
 }
