@@ -1,0 +1,101 @@
+.contact {
+    display: grid;
+    grid-template-columns: 1fr;
+    position: relative;
+    height: 80vh;
+
+
+    .section-scroll {
+        background-color: $bg-dark;
+    }
+
+    @media(min-width: 992px) {
+        grid-template-columns: 1fr 6fr 100px;
+    }
+
+    .contact-container {
+        // 
+        background: linear-gradient(rgba(10, 68, 39, 0.8) rgba(10, 68, 39, 0.6)), url('../img/zespol01.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        color: $white;
+        padding: 100px 50px;
+
+        @media(min-width:992px) {
+            flex-direction: row;
+            align-items: flex-start;
+            padding-top: 50px;
+            margin-left: 50px;
+        }
+
+
+
+        .contact-welcome {
+
+            width: 40%;
+        }
+
+        .contact-phones {
+
+            width: 40%;
+        }
+
+
+
+        .welcome,
+        .phone {
+            font-size: $f-huge;
+            font-weight: bold;
+            line-height: 1.28;
+            letter-spacing: -1.01px;
+        }
+
+        .name {
+            font-family: "Roboto", sans-serif;
+            font-weight: 300;
+            line-height: 1.44;
+            margin-bottom: 20px;
+        }
+
+
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+
+
+
+
+
+            .icon {
+                display: flex;
+                margin: 20px;
+
+                img {
+                    margin-right: 20px;
+                }
+
+                .info {
+                    font-family: "Roboto", sans-serif;
+                    font-size: $f-mid;
+                    line-height: 1.44;
+
+
+
+                    &.little {
+                        font-size: $f-little;
+                    }
+                }
+
+            }
+        }
+
+    }
+
+}
